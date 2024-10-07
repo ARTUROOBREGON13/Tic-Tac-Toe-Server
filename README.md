@@ -65,7 +65,7 @@ node server.js
 
 ```json
 {
-  "type": "update",
+  "type": "move",
   "moveIndex": 1,
   "symbol": "O"
 }
