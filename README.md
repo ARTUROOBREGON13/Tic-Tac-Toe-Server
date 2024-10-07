@@ -47,27 +47,27 @@ node server.js
 - Upon connection, each player is assigned either X or O.
 - Clients exchange game updates through messages in JSON format.
 - The server ensures that only the correct player can make a move on their turn.
-- When a player wins or the game ends in a draw, the server broadcasts the result to both clients.
+- When a player wins, the server broadcasts the result to both clients.
+- Any user can reset the board at any point.
 
 ### Example Message Format
 
-#### Client to Server (Move):
+#### Client to Server (Start):
 
 ```json
 {
-  "type": "move",
-  "player": "X",
-  "position": 4
+  "type": "start",
+  "turn": "X"
 }
 ```
 
-#### Server to Client (Update):
+#### Server to Client (Move):
 
 ```json
 {
   "type": "update",
-  "board": ["X", "", "", "", "O", "", "", "", ""],
-  "nextPlayer": "O"
+  "moveIndex": 1,
+  "symbol": "O"
 }
 ```
 
