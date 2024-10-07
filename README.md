@@ -75,6 +75,3 @@ node server.js
 
 You can change the port and other settings by editing `server.js`. You can also extend the logic to support more features such as spectators or score tracking.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
